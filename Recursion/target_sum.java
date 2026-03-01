@@ -33,3 +33,34 @@ class Main {
         System.out.println(find(arr, 0, arr.length, target, 0));
     }
 }
+
+
+
+//Second-Method
+
+class Main {
+    
+    public static boolean helper(int arr[],int idx,int n,int target,int sum){
+        
+        if(target==0){
+            return true;
+        }
+        
+        if(idx==n || target<0){
+            return false;
+        }
+        
+        return helper(arr,idx+1,n,target,sum) ||
+               helper(arr,idx+1,n,target-arr[idx],sum);
+    }
+
+    public static void main(String[] args) {
+        
+        int arr[]={3,6,4,5};
+        int target=12;
+        int n=arr.length;
+        int sum=0;
+
+        System.out.println(helper(arr,0,n,target,sum));
+    }
+}
