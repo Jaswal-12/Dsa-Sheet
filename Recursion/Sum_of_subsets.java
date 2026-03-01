@@ -21,3 +21,26 @@ class Main {
         subsets(arr,0,n,sum);
     }
 }
+
+//Second-Method
+class Main {
+    
+    public static void helper(int arr[],int idx,int n,int sum){
+        if(idx==n){
+            System.out.println(sum);
+            return;
+        }
+        
+        sum=sum+arr[idx];
+        helper(arr,idx+1,n,sum);
+        sum=sum-arr[idx];
+        helper(arr,idx+1,n,sum);
+    }
+
+    public static void main(String[] args) {
+       int arr[]={1,2,3};
+       int n=arr.length;
+       int sum=0;
+       helper(arr,0,n,sum);
+    }
+}
