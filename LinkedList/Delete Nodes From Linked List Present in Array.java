@@ -35,3 +35,34 @@ class Solution {
         return dummy.next;
     }
 }
+
+//Final-Approach//
+class Solution {
+    public ListNode modifiedList(int[] nums, ListNode head) {
+
+        // STEP 1: nums ko HashSet me daal do
+        HashSet<Integer> set = new HashSet<>();
+        for(int num : nums){
+            set.add(num);
+        }
+
+        // STEP 2: dummy node (important)
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+
+        ListNode prev = dummy;
+        ListNode curr = head;
+
+        // STEP 3: traverse and delete
+        while(curr != null){
+            if(set.contains(curr.val)){
+                prev.next = curr.next; // delete node
+            } else {
+                prev = curr; // move prev only if not deleted
+            }
+            curr = curr.next;
+        }
+
+        return dummy.next;
+    }
+}
