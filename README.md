@@ -4,7 +4,6 @@ This repository is a structured collection of **Data Structures and Algorithms (
 It is designed to strengthen problem-solving skills and support preparation for **technical interviews, coding assessments, and competitive programming**.
 
 ---
-
 ## 📂 Repository Structure
 The repository is organized topic-wise for better clarity and easy navigation:
 
