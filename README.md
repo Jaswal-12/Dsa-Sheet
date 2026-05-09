@@ -5,7 +5,7 @@ It is designed to strengthen problem-solving skills and support preparation for 
 
 ---
 ## 📂 Repository Structure
-The repository is organized topic-wise for better clarity and easy navigation:
+The repository is organized topic-wise for better clarity and easy navigation
 
 - Arrays
 - Strings
